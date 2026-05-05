@@ -1,0 +1,22 @@
+  142  mkdir CTA200_2026
+  143  cd CTA200_2026/
+  144  mkdir assignment_1
+  145  touch README.md
+  146  vi README.md 
+  147  find /home/murray -name "Hello_world.py"
+  148  cd assignment_1/
+  149  touch Hello_world.c
+  150  touch Hello_world.py
+  151  vi Hello_world.c
+  152  vi Hello_world.py 
+  153  mv Hello_world.c Hello_world_Johnston.c
+  154  mv Hello_world.py Hello_world_Johnston.py
+  155  gcc Hello_world_Johnston.c -o Hello_world.x
+  156  ./Hello_world.x 
+  157  python3 Hello_world_Johnston.py
+  158  vi Hello_world_Johnston.c
+  159  vi Hello_world_Johnston.py
+  160  gcc Hello_world_Johnston.c -o Hello_world.x
+  161  ./Hello_world.x > output_c.txt
+  162  python3 Hello_world_Johnston.py > output_python.txt
+  163  history 23 > history.txt
