@@ -1,22 +1,24 @@
-  142  mkdir CTA200_2026
-  143  cd CTA200_2026/
-  144  mkdir assignment_1
-  145  touch README.md
-  146  vi README.md 
-  147  find /home/murray -name "Hello_world.py"
-  148  cd assignment_1/
-  149  touch Hello_world.c
-  150  touch Hello_world.py
-  151  vi Hello_world.c
-  152  vi Hello_world.py 
-  153  mv Hello_world.c Hello_world_Johnston.c
-  154  mv Hello_world.py Hello_world_Johnston.py
-  155  gcc Hello_world_Johnston.c -o Hello_world.x
-  156  ./Hello_world.x 
-  157  python3 Hello_world_Johnston.py
-  158  vi Hello_world_Johnston.c
-  159  vi Hello_world_Johnston.py
-  160  gcc Hello_world_Johnston.c -o Hello_world.x
-  161  ./Hello_world.x > output_c.txt
-  162  python3 Hello_world_Johnston.py > output_python.txt
-  163  history 23 > history.txt
+  342  cd /fs/lustre/scratch/djohnston
+  343  mkdir CTA200_2026
+  344  cd CTA200_2026/
+  345  mkdir assignment_1
+  346  touch README.md 
+  347  vi README.md
+  348  find /home/murray/ -name "Hello_world.c" 2>/dev/null
+  349  find /home/murray/ -name "Hello_world.py" 2>/dev/null
+  350  cp /home/murray/Papers/tmp/Hello_world.c ./assignment_1
+  351  cp /home/murray/tmp/Hello_world.py ./assignment_1
+  352  cd assignment_1
+  353  mv Hello_world.c Hello_world_Johnston.c
+  354  mv Hello_world.py Hello_world_Johnston.py
+  355  gcc Hello_world_Johnston.c -o Hello_world.x
+  356  ./Hello_world.x 
+  357  python3 Hello_world_Johnston.py 
+  358  vi Hello_world_Johnston.c
+  359  vi Hello_world_Johnston.py
+  360  gcc Hello_world_Johnston.c -o Hello_world.x
+  361  ./Hello_world.x 
+  362  python3 Hello_world_Johnston.py 
+  363  ./Hello_world.x > output_c.txt
+  364  python3 Hello_world_Johnston.py > output_python.txt
+  365  history 24 > history.txt

@@ -1,6 +1,4 @@
 #include <stdio.h>
-int main() {
+int main(){
 	printf("Hello, Damon Johnston from C\n");
-	return 0;
 }
-
