@@ -18,7 +18,7 @@
     %\caption{Absolute}
   \end{minipage}
   \hfill
-  \begin{minipage}[b]{0.5\textwidth}
+  \begin{minipage}[b]{0.45\textwidth}
     \includegraphics[width=\textwidth]{colour.png}
     %\caption{Gradient}
   \end{minipage}
@@ -44,9 +44,9 @@ where $c = x+iy$ and $z_0 = 0$.
         \includegraphics[width=\textwidth, height=4cm, keepaspectratio]{q2_fig3.png}
     \end{minipage}
     \hfill
-    \begin{minipage}[b]{0.48\textwidth}
+    \begin{minipage}[b]{0.51\textwidth}
         \centering
-        \includegraphics[width=\textwidth, height=10cm, keepaspectratio]{q2_fig2.png}
+        \includegraphics[width=\textwidth, height=12cm, keepaspectratio]{q2_fig2.png}
     \end{minipage}
 \end{figure}
 
@@ -57,7 +57,8 @@ These above images are the results from question 2. They are results from analys
 with $\sigma=10$, $r=28$, $b = \frac{8}{3}$, and $W = (X, Y, Z)$.
 \\This system was solved using the \texttt{solve\_ivp} function from SciPy, over the time interval $t=0$ to $t=60$ with initial conditions $W_0 = (0, 1, 0)$ as well as $W_0' = W_0+(0, 1e-8, 0) = (0, 1.00000001, 0)$.
 \\The top left plot shows the results of this solution (with initial conditions $W_0$) for $Y$ from $t=0$ to $t=30$ (written instead with $N = t/\Delta t$ ($\Delta t = 0.01$)). This is a recreation of Lorenz' figure 1 plot in the given paper. It is mostly the same as Lorenz' plot, but deviates slightly towards the end.
-\\The right plots show the results (with initial conditions $W_0$) in Y-Z and Y-X phase space, from $t=14$ to $t=19$ (with each integer time value in this range labeled). It also shows the points of states of steady convection $C$ and $C'$ as given in the paper. This is a recreation of Lorenz' figure 2 plot, and is similarly mostly consistent, but deviates somewhat from Lorenz' plots. In both of these, there is one more concentric loops on the left side and one less on the right in mine versus Lorenz' plots. These difference as well as the difference in figure 1 could be due to being able to use higher precision on modern computers, while this paper is from over 60 years ago. In this way, small errors from lack of precision would compound, leading to the visually noticeable differences in plots here. 
+\\The right plots show the results (with initial conditions $W_0$) in Y-Z and Y-X phase space, from $t=14$ to $t=19$ (with each integer time value in this range labeled). It also shows the points of states of steady convection $C$ and $C'$ as given in the paper. This is a recreation of Lorenz' figure 2 plot, and is similarly mostly consistent, but deviates somewhat from Lorenz' plots. In both of these, there is one more concentric loops on the left side and one less on the right in mine versus Lorenz' plots. The earlier points are more consistent with Lorenz' figure, but they seem to diverge more with time (e.g. the points for t=14 are mostly consistent but t=19 are on opposite sides of the graph).
+\\These difference as well as the difference in figure 1 could be due to being able to use higher precision on modern computers, while this paper is from over 60 years ago. In this way, small errors from lack of precision would compound, leading to the visually noticeable differences in plots here. 
 \\The bottom left plot shows a semilog plot of the differences between the results from initial conditions of $W_0$ and $W_0'$ over time. The x axis is time and the y axis is the a logarithmic scale of the absolute value of the distance between the results $W'$ and $W$. From this, you can see the beginning and end as mostly flat, with a linear increase in the middle, indicating exponential growth in this distance. This is consistent with the results found by Lorenz.
 
 \end{document}
